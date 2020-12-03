@@ -1,0 +1,19 @@
+{
+  "name": "aop",
+  "version": "0.0.1",
+  "description": "Aspect oriented programming library tools",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "test": "jest"
+  },
+  "author": "Damián Pumar",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
