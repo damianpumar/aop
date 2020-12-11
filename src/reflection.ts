@@ -46,12 +46,13 @@ export class Reflection {
     const originalCode = target[methodName];
 
     target[methodName] = (...args: any) => {
-      const returnedValue = originalCode.apply(target, args);
-
+      
       if ([Advice.BEFORE, Advice.AROUND].includes(advice)) {
         aspect.apply(target, args);
       }
-
+      
+      const returnedValue = originalCode.apply(target, args);
+      
       if ([Advice.AFTER, Advice.AROUND].includes(advice)) {
         aspect.apply(target, args);
       }

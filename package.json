@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc --build",
+    "example": "npm run build && node ./dist/example",
     "clean": "tsc --build --clean",
     "test": "jest"
   },
