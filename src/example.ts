@@ -17,7 +17,7 @@ class MyBusinessLogic {
   }
 }
 
-const o = new MyBusinessLogic();
+const myObject = new MyBusinessLogic();
 
 const loggingAspect = (...args: any) => {
   console.log("== Calling the logger function ==");
@@ -30,9 +30,9 @@ const printTypeOfReturnedValueAspect = (value: any) => {
 
 const aop = new AOP();
 
-aop.before(o, loggingAspect);
-aop.afterRunning(o, printTypeOfReturnedValueAspect);
+aop.before(myObject, loggingAspect);
+aop.afterRunning(myObject, printTypeOfReturnedValueAspect);
 
-o.add(2, 2);
-o.concat("hello", "goodbye");
-o.power(2, 3);
+myObject.add(2, 2);
+myObject.concat("hello", "goodbye");
+myObject.power(2, 3);
