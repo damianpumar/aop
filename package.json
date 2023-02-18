@@ -4,9 +4,8 @@
   "description": "Aspect oriented programming library tools",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --build",
-    "example": "npm run build && node ./dist/example",
-    "clean": "tsc --build --clean",
+    "prestart": "tsc --build",
+    "start": "node ./dist/example",
     "test": "jest"
   },
   "author": "Damián Pumar",
